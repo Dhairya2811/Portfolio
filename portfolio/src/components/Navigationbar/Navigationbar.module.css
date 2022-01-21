@@ -1,0 +1,24 @@
+.Navigationbar {
+    padding-left: 11%;
+    padding-right: 11%;
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+    color: #fff;
+}
+.bg-transferent{
+    background-color: transparent;
+    
+}
+.bold{
+    font-weight: bold;
+}
+.logo{
+    font-size: 40px;
+}
+.samecolor{
+    color: #fff;
+}
+.navitems{
+    width: 100%;
+    float: right;
+    align-items: flex-end;
+}
