@@ -1,0 +1,24 @@
+.AboutComponent {
+    margin: 3em 0;
+}
+.title{
+    text-align: center;
+}
+.PersonalInfo{
+    margin: 10px 10em 0 10em;  
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+}
+.Info, .Skills{
+    font-size: 1.6em;
+    padding: 1em;
+}
+.Info{
+    text-align: right;
+    border-right: 0.01em solid gray;
+}
+.SkillComponent{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

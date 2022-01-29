@@ -6,7 +6,7 @@ import background from '../../Images/titleBackground2.png';
 class HomeComponent extends React.Component{
   render(){
   return(
-  <div className={styles.HomeComponent}>
+  <div id='homePage' className={styles.HomeComponent}>
     <div className={styles.titleBackground}>
       <img className={styles.titleBackgroundImage} src={background} height={window.innerHeight}/>
     </div>
@@ -25,7 +25,7 @@ class HomeComponent extends React.Component{
           />
       <div className="animate__animated animate__bounceInDown animate__delay-5s">
         <div className={styles.downArrowDiv}>
-          <i class="fa fa-angle-double-down"></i>
+            <a href='#aboutPage' className={styles.homepageLinks}><i class="fa fa-angle-double-down"></i></a>
         </div>
       </div>
     </div>

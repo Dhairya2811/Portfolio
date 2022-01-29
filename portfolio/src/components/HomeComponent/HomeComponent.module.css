@@ -22,3 +22,11 @@
     margin-top: 2.5em;
     text-align: center;
 }
+.homepageLinks{
+    text-decoration: none;
+    color: #fff;
+}
+.homepageLinks:hover{
+    text-decoration: none;
+    color: #fff;
+}
