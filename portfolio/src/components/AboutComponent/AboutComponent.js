@@ -3,7 +3,7 @@ import { useTransition, animated } from "@react-spring/web"
 import styles from './AboutComponent.module.css';
 
 const skills = [["HTML", "CSS", "JavaScript", "ReactJS", "jQuery"], 
-  ["Java", "C#.Net", "Python", "Django", "PHP"],
+  ["Java", "C#.Net", "Python", "Django", "PHP", "Node.js"],
   ["SQLite3", "MySQL", "PostgreSQL"]];
 const statements = ["I design and build quality responsive websites, clean user interface and rich interactive web apps ,"
 +" which leands to the success of the overall product.", 

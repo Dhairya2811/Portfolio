@@ -6,7 +6,9 @@ import AboutComponent from './components/AboutComponent/AboutComponent';
 function App() {
   return (
     <div className="App">
+      <div id='navbar_main'>
       <Navigationbar />
+      </div>
       <HomeComponent />
       <AboutComponent />
     </div>
