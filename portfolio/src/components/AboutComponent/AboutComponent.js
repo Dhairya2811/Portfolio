@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React, {useState, useRef, useEffect}  from 'react';
 import { useTransition, animated } from "@react-spring/web"
 import styles from './AboutComponent.module.css';
 
@@ -11,6 +11,8 @@ const statements = ["I design and build quality responsive websites, clean user 
 
 const AboutComponent = () => {
   const [index, setIndex] = useState(0);
+  const [height, setHeight] = useState(0); 
+  const [innerHeight, setInnerHeight] = useState(0); 
   const [indexStatement, setIndexStatement] = useState(0);
   const transition = useTransition(index, {
     key: index,
@@ -45,12 +47,20 @@ const AboutComponent = () => {
     },
     exitBeforeEnter: true,
   });
-  return<div id="aboutPage" className={styles.AboutComponent}>
+  const ref = useRef();
+  const innerRef = useRef();
+  useEffect(()=>{
+    let h = ref.current.clientHeight;
+    setHeight(h);
+    const hi = innerRef.current.clientHeight;
+    setInnerHeight(hi);
+  })
+  return<div id="aboutPage" className={styles.AboutComponent}  ref={ref} style={{minHeight: height, height:"fit-content"}}>
     <div className={styles.title}>
       <h1>Personal Info</h1>
       <p>Know more about me</p>
       <div className={styles.PersonalInfo}>
-        <div className={styles.Info}>
+        <div className={styles.Info} ref={innerRef} style={{minHeight: innerHeight, height:"fit-content"}}>
         {transition2((style2, i2)=>(
             <animated.div 
               style = {{

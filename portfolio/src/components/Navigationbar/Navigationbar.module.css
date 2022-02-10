@@ -3,7 +3,7 @@
     padding-right: 11%;
     font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
     color: #fff;
-    background-color: rgba(36, 36, 36, 0.575);
+    background: linear-gradient(#000000f8, #14141411);
 }
 .bold{
     font-weight: bold;

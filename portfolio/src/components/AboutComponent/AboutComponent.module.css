@@ -1,14 +1,14 @@
 .AboutComponent {
-    margin: 7em 0;
+    padding: 7em 0;
+    
 }
 .title{
     text-align: center;
 }
 .PersonalInfo{
-    margin: 3em 10em 0 10em;  
+    margin: 3em 10% 0 10%;  
     display: grid;
     grid-template-columns: 1fr 1fr;  
-    min-height: 290px;
 }
 .Info, .Skills{
     font-size: 1.6em;
