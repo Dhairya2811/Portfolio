@@ -13,7 +13,7 @@ const Navigationbar = () => (
             <Nav.Link href="#homePage"><span className={style.samecolor}>HOME</span></Nav.Link>
             <Nav.Link href="#aboutPage"><span className={style.samecolor}>ABOUT</span></Nav.Link>
             <Nav.Link href="#projects"><span className={style.samecolor}>PROJECTS</span></Nav.Link>
-            <Nav.Link href="#"><span className={style.samecolor}>CONTACT</span></Nav.Link>
+            <Nav.Link href="#contact"><span className={style.samecolor}>CONTACT</span></Nav.Link>
         </Nav>
       </Navbar>
     </div>

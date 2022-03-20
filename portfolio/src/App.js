@@ -3,6 +3,7 @@ import Navigationbar from './components/Navigationbar/Navigationbar';
 import HomeComponent from './components/HomeComponent/HomeComponent';
 import AboutComponent from './components/AboutComponent/AboutComponent';
 import Projects from './components/Projects/Projects';
+import ContactInfo from './components/ContactInfo/ContactInfo';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <HomeComponent />
       <AboutComponent />
       <Projects />
+      <ContactInfo />
     </div>
   );
 }
