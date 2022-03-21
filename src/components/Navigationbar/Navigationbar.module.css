@@ -1,0 +1,38 @@
+.Navigationbar {
+    padding-left: 11%;
+    padding-right: 11%;
+    font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+    color: #fff;
+    background: linear-gradient(#000000f8, #14141411);
+}
+.bold{
+    font-weight: bold;
+}
+.logo{
+    color: #fff;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+.samecolor{
+    color: #fff;
+    font-weight: bold;
+}
+@keyframes samecolorHover {
+    from {border-width: 0px;}
+    to {border-width: 5px;}
+}
+.samecolor:hover{
+    /* border-radius: 5px; */
+    border-bottom:  solid gray;
+    animation-name: samecolorHover;
+    padding: 10px 10px 10px 5px;
+    animation-duration: 0.5s;
+    margin: 0 -10px 0 -5px;
+    animation-fill-mode: forwards;
+}
+.navitems{
+    width: 100%;
+    float: right;
+    align-items: flex-end;
+}

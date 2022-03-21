@@ -1,0 +1,15 @@
+.ProjectDisplay {
+    margin-bottom: 7em;
+}
+.animateDiv{
+    height: 20em;
+    width: 20em;
+    background-color: rgba(173, 173, 173, 0.425);
+    padding: 1em 1em 1em 1em;
+    z-index: -1;
+}
+.closeBtn{
+    width: 102%;
+    text-align: right;
+    margin-top: -1em;
+}

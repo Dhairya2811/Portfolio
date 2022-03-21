@@ -1,0 +1,27 @@
+.ContactInfo {
+    padding: 7em 10%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.664));
+    color: white;
+}
+.title{
+    width: 100%;
+    text-align: center;
+}
+.contactInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title>h1{
+    margin-bottom: 2em;
+}
+.email, .phoneNumber, .location{
+    text-align: left;
+    margin-bottom: 1em;
+}
+.email>p, .phoneNumber>p, .location>p{
+    margin-left: 10px;
+}
+.email{
+    margin-right: -2em;
+}
