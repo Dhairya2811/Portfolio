@@ -8,7 +8,7 @@ const Navigationbar = () => (
   <div className="animate__animated animate__fadeInDown animate__delay-0.5s" id='navbar_main'>
     <div className={style.Navigationbar}>
       <Navbar fixed="top" className={style.Navigationbar}>
-        <Navbar.Brand className={style.bold} className={style.logo}><span className={style.samecolor}>DS</span></Navbar.Brand>
+        <Navbar.Brand ><span className={style.logo}>DS</span></Navbar.Brand>
         <Nav className='justify-content-end' style={{ width:"100%" }}>
             <Nav.Link href="#homePage"><span className={style.samecolor}>HOME</span></Nav.Link>
             <Nav.Link href="#aboutPage"><span className={style.samecolor}>ABOUT</span></Nav.Link>
