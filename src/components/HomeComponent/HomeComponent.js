@@ -11,7 +11,7 @@ class HomeComponent extends React.Component{
       <img className={styles.titleBackgroundImage} src={background} height={window.innerHeight}/>
     </div>
     <div className={styles.titleText}>
-      <div className="animate__animated animate__fadeInDown animate__delay-1s"><div>Hello There, I'm</div></div>
+      <div className="animate__animated animate__fadeInDown animate__delay-1s"><div className={styles.helloText}>Hello There, I'm</div></div>
       <div className="animate__animated animate__fadeInLeft animate__delay-2s"><div className={styles.biggerFontTitle}>Dhairya Soni</div></div>
       <TypeWriterEffect
             startDelay={3000}
@@ -19,6 +19,7 @@ class HomeComponent extends React.Component{
             multiText={[
               'a Web Developer',
             ]}
+            className={styles.helloText}
             multiTextDelay={2100}
             typeSpeed={170}
             hideCursorAfterText={true}
