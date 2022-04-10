@@ -5,6 +5,7 @@
     flex: 1;
     z-index: -1;
     justify-content: center;
+    width: 100%;
 }
 .titleText{
     color: #fff;
@@ -36,8 +37,10 @@
         overflow-y:hidden;
     }
     .titleBackgroundImage{
-        min-width: 850px;
+        display: block;
+        width: 850px;
         overflow-x:hidden;
         overflow-y:hidden;
+        object-fit: fill;
     }
 }
