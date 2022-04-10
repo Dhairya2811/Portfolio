@@ -4,6 +4,7 @@
     font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
     color: #fff;
     background: linear-gradient(#000000f8, #14141411);
+    overflow: hidden;
 }
 .bold{
     font-weight: bold;
@@ -35,4 +36,9 @@
     width: 100%;
     float: right;
     align-items: flex-end;
+}
+@media only screen and (min-width:820px){
+    .Navigationbar{
+        width: 100%;
+    }
 }
