@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect} from 'react';
 import { useSpring, animated} from '@react-spring/web'
 import styles from './ProjectDisplay.module.css';
 import $ from 'jquery';
+import SAProjectDataComponent from '../SAProjectDataComponent/SAProjectDataComponent';
 import ProjectImg from '../ProjectImg/ProjectImg';
 
 const ProjectDisplay = (data) => {
@@ -23,7 +24,25 @@ const ProjectDisplay = (data) => {
     easing: (t) => t
   });
   const ref2 = useRef();
-
+  function close(){
+    $("#afterClick").fadeOut();          
+    $("#container").animate({
+      height: `20em`,
+      width: `20em`,
+      marginTop: `0`,
+      position: "relative",
+      // marginLeft: `${$(window).width()*0.1}`
+    }, 1000, function(){
+      $(".ProjectDisplay").animate({
+        marginBottom: `7em`
+      });
+      $("#projectBG").show();
+      $("#projectBG").animate({
+        opacity: "1"
+      },500);
+      setOpen(false);
+    });
+  }
   useEffect(()=>{
     $("#container").unbind().on("click", function(){
       console.log(`height: ${$(".animateDiv").height()}`);
@@ -53,29 +72,12 @@ const ProjectDisplay = (data) => {
           });
         });
       }else{
-        $("#container").unbind().on("dblclick", function(){
-          $("#afterClick").fadeOut();          
-          $("#container").animate({
-            height: `20em`,
-            width: `20em`,
-            marginTop: `0`,
-            position: "relative",
-            // marginLeft: `${$(window).width()*0.1}`
-          }, 1000, function(){
-            $(".ProjectDisplay").animate({
-              marginBottom: `7em`
-            });
-            $("#projectBG").show();
-            $("#projectBG").animate({
-              opacity: "1"
-            },500);
-            setOpen(false);
-          });
-        })
+        $("#container").unbind().on("dblclick", close())
       }
     });
   });
 
+  const getFromChild = (text)=>{console.log(text);close();}
 
   return (<div className={styles.ProjectDisplay}>
       <animated.div
@@ -96,7 +98,7 @@ const ProjectDisplay = (data) => {
             <ProjectImg class={styles.img} src = {data.img}/>
           </div>
           <div id="afterClick" style={{display: "none",backgroundColor: "white", height: "100%", textAlign:"left", padding:"2em", zIndex:1}}>
-              {data.dataComponent}
+            <SAProjectDataComponent getFromChild={getFromChild} />
               {/* <p>Add Project Details</p>
               <a href='https://dhairyasonicapstoneproject.herokuapp.com/' target="_blank">Seller Agent project</a> */}
           </div>

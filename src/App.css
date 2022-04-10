@@ -3,6 +3,20 @@ body{
   margin-left: 20%;
   margin-right: 20%;
 }
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+  scrollbar-width: 10px;
+}  
+body::-webkit-scrollbar-track {
+  border-left: 4px solid white;         /* color of the tracking area */ 
+  border-right: 4px solid white;         /* color of the tracking area */ 
+  background: rgb(170, 170, 170);
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(92, 92, 92);
+  width: 10px; 
+}
 #navbar_main{
   position: fixed;
   width: 100%;

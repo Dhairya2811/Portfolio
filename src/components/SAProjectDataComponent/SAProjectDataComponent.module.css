@@ -1,1 +1,95 @@
-.SAProjectDataComponent {}
+.landingDiv{
+    width: 99%;
+    height: 100%;
+    background-image: url("../../Images/background\ for\ project\ data.jpg");
+    background-size: cover;
+}
+.aboutProject{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.407);
+    text-align: center;
+    padding: 7% 10% 7% 10%;
+}
+.projectTitle{
+    margin-bottom: 1em;
+}
+.projectLaptop{
+    margin-top: 4%;
+    width: 100%;
+    text-align: center;
+}
+.button{
+    background-color: #2f5e8e !important;
+    border-color: #2f5e8e;
+    padding-left: 2em;
+    padding-right: 2em
+}
+.button:hover{
+    background-color: #23486d !important;
+    border-color: #23486d;
+}
+.projectInfo{margin-bottom: 3em;}
+.SAProjectDataComponent{
+    margin: 0 0.5%;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* scrollbar-width: thin;           "auto" or "thin" 
+    scrollbar-color: rgb(90, 90, 90) gray;  */
+}
+.SAProjectDataComponent::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+    scrollbar-width: 10px;
+}  
+.SAProjectDataComponent::-webkit-scrollbar-track {
+    border-left: 4px solid white;         /* color of the tracking area */ 
+    border-right: 4px solid white;         /* color of the tracking area */ 
+    background: rgb(170, 170, 170);
+}
+.SAProjectDataComponent::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgb(92, 92, 92);
+    width: 10px; 
+}
+.SkillComponent{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0.3em;
+    color: white;
+    background-color: rgb(181, 181, 181);
+    border-color: transparent;
+}
+.projectSkills{
+    margin: 4em 5%;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ProjectImage{
+    height: 100%;
+    width: 50%;
+}
+.buttonLinks{
+    width: 90%;
+    margin: 1em 5% 1em 5%;
+}
+.backButton{
+    float: left;
+}
+.lastSAButton{
+    float: right;
+    background-color: #2f5e8e !important;
+    border-color: #2f5e8e;
+    padding-left: 2em;
+    padding-right: 2em
+}
+.leftArrow{
+    font-weight: bold;
+}
+.adjustDiv{
+    width:100%;
+    height:3em;
+    margin-bottom: 3em;
+}
