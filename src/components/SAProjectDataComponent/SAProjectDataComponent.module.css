@@ -53,7 +53,7 @@
     width: 10px; 
 }
 .SkillComponent{
-    padding: 5px;
+    padding: 3px 1em;
     border: 1px solid black;
     border-radius: 5px;
     margin: 0.3em;
@@ -84,6 +84,10 @@
     border-color: #2f5e8e;
     padding-left: 2em;
     padding-right: 2em
+}
+.lastSAButton:hover{
+    background-color: #23486d !important;
+    border-color: #23486d;
 }
 .leftArrow{
     font-weight: bold;

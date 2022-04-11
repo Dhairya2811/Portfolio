@@ -37,8 +37,14 @@
     float: right;
     align-items: flex-end;
 }
-@media only screen and (min-width:820px){
+@media only screen and (max-width:820px){
     .Navigationbar{
         width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: #000000f8;
     }
+    /* .samecolor{
+        color:gray;
+    } */
 }

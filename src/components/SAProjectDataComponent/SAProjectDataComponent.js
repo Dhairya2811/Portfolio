@@ -6,7 +6,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ProjectInLaptop from "../../Images/SAProjectLaptop.png";
 
 
-var skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django", "SQLite"]
+var skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "Django", "SQLite", "VS Code", "PyCharm"];
 const SAProjectDataComponent = ({ getFromChild }) => {
   const click = ()=>{
     console.log("Dhairya");
