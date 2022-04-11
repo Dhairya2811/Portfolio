@@ -11,7 +11,7 @@ const Projects = () => {
         <h1>Latest Projects</h1>
         <div className={styles.project_container}>
           <ProjectDisplay img={SA} />
-          {/* <ProjectDisplay img={SA} /> */}
+          <ProjectDisplay img={SA} />
         </div>
       </div>
     </AnimationOnScroll>
