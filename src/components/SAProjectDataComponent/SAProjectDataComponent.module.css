@@ -93,3 +93,35 @@
     height:3em;
     margin-bottom: 3em;
 }
+@media only screen and (max-width: 821px){
+    .landingDiv{
+        height: fit-content;
+    }
+    .aboutProject{
+        background-color: transparent;
+        height: fit-content;
+        padding: 5% 2%;
+    }
+    .ProjectImage{
+        height: 150%;
+        width: 85%;
+    }
+    .projectLaptop{
+        display: block
+    }
+    .projectSkills{
+        margin: 2em 2%;
+    }
+    .buttonLinks{
+        width: 96%;
+        margin: 1em 2%;
+    }
+    .adjustDiv{
+        width:100%;
+        height:3em;
+        margin-bottom: 1em;
+    }
+    .projectInfo{
+        margin-bottom: 1em;
+    }
+}

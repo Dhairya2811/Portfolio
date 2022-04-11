@@ -57,7 +57,7 @@ const AboutComponent = () => {
   })
   return<div id="aboutPage" className={styles.AboutComponent}  ref={ref} style={{minHeight: height, height:"fit-content"}}>
     <div className={styles.title}>
-      <h1>Personal Info</h1>
+      <h1><div className={styles.personalInfoH1}>Personal Info</div></h1>
       <p>Know more about me</p>
       <div className={styles.PersonalInfo}>
         <div className={styles.Info} ref={innerRef} style={{minHeight: innerHeight, height:"fit-content"}}>

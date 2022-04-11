@@ -3,7 +3,6 @@ import { useSpring, animated} from '@react-spring/web'
 import styles from './ProjectDisplay.module.css';
 import $ from 'jquery';
 import SAProjectDataComponent from '../SAProjectDataComponent/SAProjectDataComponent';
-import ProjectImg from '../ProjectImg/ProjectImg';
 
 const ProjectDisplay = (data) => {
   const [open, setOpen] = useState(false);
@@ -12,7 +11,12 @@ const ProjectDisplay = (data) => {
     (x - (rect.left) - rect.width /2) / 5,
     1.1
   ];
-  const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+  const trans = (x, y, s) => {if($(window).width()>820){
+      return `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
+    }else{
+      return 0;
+    }
+  }
   const [xys, set] = useState([0,0,1]);
   const props = useSpring({xys,
     mass: 1,
@@ -42,14 +46,11 @@ const ProjectDisplay = (data) => {
       },500);
       setOpen(false);
     });
+    if($(window).width()<821){window.location.href = '#projects';}
   }
   useEffect(()=>{
     $("#container").unbind().on("click", function(){
-      console.log(`height: ${$(".animateDiv").height()}`);
-      if($("#container").height() == 288){
-        console.log("go");
-        // $("#container").css("position", "absolute");
-        // $("#container").css("z-index", "1");
+      if($("#container").height() === 288){
         set([0,0,1]);
         $("#projectBG").animate({
           opacity: "0"
@@ -57,8 +58,8 @@ const ProjectDisplay = (data) => {
           setOpen(true);
           $("#projectBG").hide();
           $("#container").animate({
-            height: `${$(window).height()*0.8}`,
-            width: `${$(window).width()*0.8}`,
+            height: ($(window).width()>821) ? `${$(window).height()*0.8}` : `${$(window).height()*0.8}`,
+            width: ($(window).width()>821) ? `${$(window).width()*0.8}` : `${$(window).width()}`,
             marginTop: `-${$(window).height()*0.2}`,
             // marginLeft: `-${$(window).width()*0.15}`,
             zIndex: -1,
@@ -71,13 +72,13 @@ const ProjectDisplay = (data) => {
               $("#afterClick").fadeIn();
           });
         });
-      }else{
+      }/**else{
         $("#container").unbind().on("dblclick", close())
-      }
+      }*/
     });
   });
 
-  const getFromChild = (text)=>{console.log(text);close();}
+  const getFromChild = (text)=>{console.log($(window).width());close();}
 
   return (<div className={styles.ProjectDisplay}>
       <animated.div
@@ -88,16 +89,22 @@ const ProjectDisplay = (data) => {
         ref = {ref2}
         onMouseLeave={() => set([0, 0, 1])}
         style={{
-            transform: open ? 0 : props.xys.to(trans),
-            zIndex: -1
+            transform: (open) ? 0 : props.xys.to(trans),
+            zIndex: -1,
         }}
         className={styles.animateDiv}
         id="container"
       >
           <div id="projectBG">
-            <ProjectImg class={styles.img} src = {data.img}/>
+            {/* <ProjectImg class={styles.img} src = {data.img}/> */}
+            <img src={data.img} className={styles.projectBG} /** id="projectBG" *//>
           </div>
-          <div id="afterClick" style={{display: "none",backgroundColor: "white", height: "100%", textAlign:"left", padding:"2em", zIndex:1}}>
+          <div id="afterClick" style={{display: "none",
+            backgroundColor: "white", 
+            height: "100%", 
+            textAlign:"left", 
+            padding: $(window).width()>820 ? "2em" : "1em 0.5em", 
+            zIndex:2}}>
             <SAProjectDataComponent getFromChild={getFromChild} />
               {/* <p>Add Project Details</p>
               <a href='https://dhairyasonicapstoneproject.herokuapp.com/' target="_blank">Seller Agent project</a> */}

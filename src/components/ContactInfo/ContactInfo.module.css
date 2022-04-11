@@ -25,3 +25,9 @@
 .email{
     margin-right: -2em;
 }
+@media only screen and (max-width: 670px){
+    .contactInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
