@@ -29,8 +29,9 @@ const ProjectDisplay = (data) => {
   });
   const ref2 = useRef();
   function close(){
-    $("#afterClick").fadeOut();          
-    $("#container").animate({
+    $(`#${data.ID}afterClick`).fadeOut();          
+    // $(`#${data.ID}`).css("position", "relative");
+    $(`#${data.ID}`).animate({
       height: `20em`,
       width: `20em`,
       marginTop: `0`,
@@ -40,8 +41,8 @@ const ProjectDisplay = (data) => {
       $(".ProjectDisplay").animate({
         marginBottom: `7em`
       });
-      $("#projectBG").show();
-      $("#projectBG").animate({
+      $(`#${data.ID}projectBG`).show();
+      $(`#${data.ID}projectBG`).animate({
         opacity: "1"
       },500);
       setOpen(false);
@@ -49,36 +50,40 @@ const ProjectDisplay = (data) => {
     if($(window).width()<821){window.location.href = '#projects';}
   }
   useEffect(()=>{
-    $("#container").unbind().on("click", function(){
-      if($("#container").height() === 288){
+    $(`#${data.ID}`).unbind().on("click", function(){
+      if($(`#${data.ID}`).height() === 288){
         set([0,0,1]);
-        $("#projectBG").animate({
+        $(`#${data.ID}projectBG`).animate({
           opacity: "0"
         }, 500, function(){
+          $(`#${data.ID}`).css("position", "absolute");
+          $(`#${data.ID}`).css("margin-left", "20%");
           setOpen(true);
-          $("#projectBG").hide();
-          $("#container").animate({
+          $(`#${data.ID}projectBG`).hide();
+          $(`#${data.ID}`).animate({
             height: ($(window).width()>821) ? `${$(window).height()*0.8}` : `${$(window).height()*0.8}`,
             width: ($(window).width()>821) ? `${$(window).width()*0.8}` : `${$(window).width()}`,
             marginTop: `-${$(window).height()*0.2}`,
-            // marginLeft: `-${$(window).width()*0.15}`,
-            zIndex: -1,
-            transform:0
+            left: 0,
+            marginLeft: "20%",
+            marginRight: "10%",
+            zIndex: 1,
+            transform:0,
           }, 1000, function(){
-            // $("#container").css("z-index", "1");
-            $(".ProjectDisplay").animate({
-              marginBottom: `${$(window).height()*0.1}`
-            });
-              $("#afterClick").fadeIn();
+          // $(`#${data.ID}`).css("position", "absolute");
+          // $(`#${data.ID}`).css("left", "0");
+          // $(`#${data.ID}`).css("margin-left", "10%");
+          $(".ProjectDisplay").animate({
+            marginBottom: `${$(window).height()*0.1}`
+          });
+            $(`#${data.ID}afterClick`).fadeIn();
           });
         });
-      }/**else{
-        $("#container").unbind().on("dblclick", close())
-      }*/
+      }
     });
   });
 
-  const getFromChild = (text)=>{console.log($(window).width());close();}
+  const getFromChild = ()=>{close();}
 
   return (<div className={styles.ProjectDisplay}>
       <animated.div
@@ -93,13 +98,13 @@ const ProjectDisplay = (data) => {
             zIndex: -1,
         }}
         className={styles.animateDiv}
-        id="container"
+        id={data.ID}
       >
-          <div id="projectBG">
+          <div id={`${data.ID}projectBG`}>
             {/* <ProjectImg class={styles.img} src = {data.img}/> */}
-            <img src={data.img} className={styles.projectBG} /** id="projectBG" *//>
+            <img src={data.img} className={styles.projectBG} />
           </div>
-          <div id="afterClick" style={{display: "none",
+          <div id={`${data.ID}afterClick`} style={{display: "none",
             backgroundColor: "white", 
             height: "100%", 
             textAlign:"left", 

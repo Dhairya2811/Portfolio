@@ -9,4 +9,5 @@
     display: flex;
     margin-top: 3em;
     justify-content: space-evenly;
+    order: 2;
 }

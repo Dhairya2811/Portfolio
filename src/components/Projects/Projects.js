@@ -10,8 +10,9 @@ const Projects = () => {
       <div className={styles.Title}>
         <h1>Latest Projects</h1>
         <div className={styles.project_container}>
-          <ProjectDisplay img={SA} />
-          <ProjectDisplay img={SA} />
+          <ProjectDisplay img={SA} ID="SAProjectContainer" classInit="SA"/>
+          <ProjectDisplay img={SA} ID="SAProjectContainer2"/>
+          <ProjectDisplay img={SA} ID="SAProjectContainer2"/>
         </div>
       </div>
     </AnimationOnScroll>
