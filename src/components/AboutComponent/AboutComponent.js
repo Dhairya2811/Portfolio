@@ -59,6 +59,7 @@ const AboutComponent = () => {
     <div className={styles.title}>
       <h1><div className={styles.personalInfoH1}>Personal Info</div></h1>
       <p>Know more about me</p>
+      <hr className={styles.hr}/>
       <div className={styles.PersonalInfo}>
         <div className={styles.Info} ref={innerRef} style={{minHeight: innerHeight, height:"fit-content"}}>
         {transition2((style2, i2)=>(

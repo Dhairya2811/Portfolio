@@ -13,7 +13,6 @@ const Navigationbar = () => (
           <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end" id="navbarScroll">
               <Nav className="justify-content-end"
-                style={{ maxHeight: '100px' }}
                 navbarScroll>
                   <Nav.Link href="#homePage"><span className={style.samecolor}>HOME</span></Nav.Link>
                   <Nav.Link href="#aboutPage"><span className={style.samecolor}>ABOUT</span></Nav.Link>
