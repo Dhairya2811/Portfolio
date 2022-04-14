@@ -56,17 +56,17 @@ const ProjectDisplay = (data) => {
         $(`#${data.ID}projectBG`).animate({
           opacity: "0"
         }, 500, function(){
-          $(`#${data.ID}`).css("position", "absolute");
-          $(`#${data.ID}`).css("margin-left", "20%");
+          // $(`#${data.ID}`).css("position", "absolute");
+          // $(`#${data.ID}`).css("margin-left", "20%");
           setOpen(true);
           $(`#${data.ID}projectBG`).hide();
           $(`#${data.ID}`).animate({
             height: ($(window).width()>821) ? `${$(window).height()*0.8}` : `${$(window).height()*0.8}`,
             width: ($(window).width()>821) ? `${$(window).width()*0.8}` : `${$(window).width()}`,
             marginTop: `-${$(window).height()*0.2}`,
-            left: 0,
-            marginLeft: "20%",
-            marginRight: "10%",
+            // left: 0,
+            // marginLeft: "20%",
+            // marginRight: "10%",
             zIndex: 1,
             transform:0,
           }, 1000, function(){
@@ -108,7 +108,8 @@ const ProjectDisplay = (data) => {
             backgroundColor: "white", 
             height: "100%", 
             textAlign:"left", 
-            padding: $(window).width()>820 ? "2em" : "1em 0.5em", 
+            paddingTop: "5px",
+            // padding: $(window).width()>820 ? "2em" : "1em 0.5em", 
             zIndex:2}}>
             <SAProjectDataComponent getFromChild={getFromChild} />
               {/* <p>Add Project Details</p>
