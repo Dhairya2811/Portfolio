@@ -11,6 +11,7 @@ const Projects = () => {
         <h1>Latest Projects</h1>
         <div className={styles.project_container}>
           <ProjectDisplay img={SA} ID="SAProjectContainer" classInit="SA"/>
+          <ProjectDisplay img={SA} ID="SAProjectContainer" classInit="SA"/>
         </div>
       </div>
     </AnimationOnScroll>
