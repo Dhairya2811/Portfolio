@@ -2,9 +2,9 @@ import React, {useState, useRef, useEffect}  from 'react';
 import { useTransition, animated } from "@react-spring/web"
 import styles from './AboutComponent.module.css';
 
-const skills = [["HTML", "CSS", "JavaScript", "ReactJS", "jQuery"], 
-  ["Java", "C#.Net", "Python", "Django", "PHP", "Node.js"],
-  ["SQLite3", "MySQL", "PostgreSQL"]];
+const skills = [["HTML", "CSS", "SCSS", "BootStrap", "Animate.CSS", "JavaScript", "TypeScript", "ReactJS", "Angular", "jQuery"], 
+  ["Java", "C#.Net", "Python", "Django", "PHP", "Node.js", "Express.js", "RESTful APIs", "GraphiQL"],
+  ["SQLite3", "MySQL", "PostgreSQL", "Oracle PL/SQL"]];
 const statements = ["I design and build quality responsive websites, clean user interface and rich interactive web apps ,"
 +" which leands to the success of the overall product.", 
 "I'm a web developer looking to facilitate the creation of modern and aesthetically pleasing websites."]
@@ -16,15 +16,15 @@ const AboutComponent = () => {
   const [indexStatement, setIndexStatement] = useState(0);
   const transition = useTransition(index, {
     key: index,
-    from: {opacity:0, transform: "translate(-1em)"},
-    enter: {opacity: 1, transform: "translate(0%)"},
-    leave: { opacity: 0, transform: "translate(15em)"},
+    from: {opacity:0, marginTop: "3em"},
+    enter: {opacity: 1, marginTop: "0em"},
+    leave: { opacity: 0, marginTop: "-1em"},
     config: { duration: 1000 },
     onRest:(_a, _b, item)=>{
       if(index === item){
-        setTimeout(()=>{setIndex((index +1)%skills.length)}, 3000)
+        setTimeout(()=>{setIndex((index +1)%skills.length)}, 10000)
         if(index === skills.length-1){
-          setTimeout(()=>{setIndex(0)}, 3000)
+          setTimeout(()=>{setIndex(0)}, 10000)
         }
       }
     },
@@ -33,9 +33,9 @@ const AboutComponent = () => {
   });
   const transition2 = useTransition(indexStatement, {
     key: indexStatement,
-    from: {opacity:0},
-    enter: {opacity: 1},
-    leave: { opacity: 0},
+    from: {opacity:0, marginTop: "1em"},
+    enter: {opacity: 1, marginTop: "0em"},
+    leave: { opacity: 0, marginTop: "-1em"},
     config: { duration: 1000 },
     onRest:(_a, _b, item)=>{
       if(indexStatement === item){
